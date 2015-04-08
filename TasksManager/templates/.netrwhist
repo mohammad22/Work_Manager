@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/mohammad/My_Works/Python_Work/Work_manager/Work_manager'
+let g:netrw_dirhist_2='/home/mohammad/My_Works/Python_Work/Work_manager'
+let g:netrw_dirhist_3='/home/mohammad/My_Works/Python_Work/Work_manager/TasksManager'
+let g:netrw_dirhist_4='/home/mohammad/My_Works/Python_Work/Work_manager/TasksManager/views'
+let g:netrw_dirhist_5='/home/mohammad/My_Works/Python_Work/Work_manager/Work_manager'
+let g:netrw_dirhist_6='/home/mohammad/My_Works/Python_Work/Work_manager'
+let g:netrw_dirhist_7='/home/mohammad/My_Works/Python_Work/Work_manager/TasksManager'
+let g:netrw_dirhist_8='/home/mohammad/My_Works/Python_Work/Work_manager/TasksManager/views'
