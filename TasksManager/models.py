@@ -37,7 +37,20 @@ class Task(models.Model):
     time_elapsed = models.IntegerField(verbose_name = "Elapsed Time", null = True, default = None, blank = True)
     importance = models.IntegerField(verbose_name = "Importance")
     project = models.ForeignKey(Project, verbose_name = "Project", null = True, default = None, blank = True)
-    app_user = models.ForeignKey(UserProfile, verbose_name = "User")
+    app_user = models.ForeignKey(Developer, verbose_name = "User")
+
+
+class Supervisor(UserProfile):
+
+    specialisation = models.CharField(max_length = 50, verbose_name = 
+            "Specialization")
+
+
+class Developer(UserProfile):
+
+    supervisor = models.ForeignKey(Supervisor, verbose_name = "Supervisor")
+
+
 
 
 
