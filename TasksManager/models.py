@@ -28,6 +28,14 @@ class Project(models.Model):
     client_name = models.CharField(max_length = 1000, verbose_name = 
             "Client name")
 
+class Supervisor(UserProfile):
+
+    specialisation = models.CharField(max_length = 50, verbose_name = 
+            "Specialization")
+
+class Developer(UserProfile):
+
+    supervisor = models.ForeignKey(Supervisor, verbose_name = "Supervisor")
 
 class Task(models.Model):
 
@@ -40,15 +48,8 @@ class Task(models.Model):
     app_user = models.ForeignKey(Developer, verbose_name = "User")
 
 
-class Supervisor(UserProfile):
-
-    specialisation = models.CharField(max_length = 50, verbose_name = 
-            "Specialization")
 
 
-class Developer(UserProfile):
-
-    supervisor = models.ForeignKey(Supervisor, verbose_name = "Supervisor")
 
 
 
