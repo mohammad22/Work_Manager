@@ -1,32 +1,32 @@
-<html>
-  <head>
-  <title>Hello world Title</title>
-  </head>
-  <body>
-    <h1>Hello World Django</h1>
-    <article>
-      <span> This is the first variable comming from Django: {{ template_var | capfirst }} 
-        <br />
-        <a href = "{% url 'public_connection' %}" > Connection </a>
-      </span>
-      <p>
-      <span>
-        {% if years < 10 %}
-          You are a children
-        {% elif years < 18 %}
-          You are a teenager
-        {% else %}
-          You are an adult!
-        {% endif %}  
-      </span>
-      </p>
-      <ul>
-        {% for city in array_city %}
-          <li>
-            {{ city }}
-          </li>
-        {% endfor %}  
-      </ul>
-    </article>
-  </body>
-</html>
+{% extends "en/public/base.html" %}
+{% block title_html%}
+    Projects list
+{% endblock %}
+{% block h1 %}
+    Projects list
+{% endblock %}
+{% block article_connect %}
+<h3>{{ action }}</h3>
+{% if all_projects|length > 0 %}
+<table>
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Title</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for project in all_projects %}    
+        <tr>
+            <td>{{ project.id }}</td>
+            <td>{{ project.title }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<span>No project. </span>
+{% endif %}
+{% endblock %}
+
+

@@ -5,4 +5,5 @@ from TasksManager.models import Project
 def page(request):
     new_project = Project(title = "Tasks Manager with Django", description = "Django project to getting start with Django easily.", client_name = "Me")
     new_project.save()
-    return render(request, 'en/public/index.html', {'action': 'Save datas of model'})
+    all_projects = Project.objects.all()
+    return render(request, 'en/public/index.html', {'action': 'Display all projects', 'all_projects': all_projects})
