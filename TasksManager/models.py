@@ -48,13 +48,3 @@ class Task(models.Model):
     app_user = models.ForeignKey(Developer, verbose_name = "User")
 
 
-
-
-
-
-
-
-
-
-
-
